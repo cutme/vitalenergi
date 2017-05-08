@@ -1,0 +1,22 @@
+{
+  "name": "vital energi",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "cutme"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bLazy": "blazy#^1.8.2",
+    "jquery-nice-select": "^1.1.0",
+    "parsleyjs": "^2.6.2"
+  }
+}

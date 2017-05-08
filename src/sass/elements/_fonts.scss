@@ -1,0 +1,9 @@
+@include font-face-db( "Rift", "rift/riftbold", $bold);
+@include font-face-db( "Rift", "rift/riftdemi", $demi);
+@include font-face-db( "Rift", "rift/riftmedium", $medium);
+
+@include font-face-db( "Proxima Nova", "proxima/ProximaNovaReg", $regular);
+@include font-face-db( "Proxima Nova", "proxima/ProximaNovaBold", $bold);
+@include font-face-db( "Proxima Nova", "proxima/ProximaNovaLight", $light);
+
+@include font-face-db( "icomoon", "icomoon/icomoon", normal);

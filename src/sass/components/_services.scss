@@ -1,0 +1,143 @@
+.c-services {
+	
+	h2 {
+		@extend %font-rift;
+		margin-bottom: 30px;
+		letter-spacing: 4px;
+		line-height: 1.1;
+		font: {
+			size: em(80);
+			weight: $demi;
+		}
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			font-size: get-vw(80);
+			margin-bottom: get-vw(30);
+		}
+	}
+	
+	&__copy {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: grid(600);
+		
+		article {
+			margin-bottom: 120px;
+			
+			p {
+				margin-bottom: 1.7em;
+				line-height: 1.7;
+				
+				@media screen and ( max-width: $base + 2*$padding + px ) {
+					margin-bottom: get-vw(35);
+					font-size: get-vw(18);
+				}
+			}			
+
+			blockquote {
+				margin-left: grid(80, 600);
+				padding-top: 80px;
+				
+				@media screen and ( max-width: $base + 2*$padding + px ) {
+					padding-top: get-vw(80);
+				}
+
+				p {
+					font-size: em(30);
+					line-height: inherit;
+					color: $c-orange;
+					
+					@media screen and ( max-width: $base + 2*$padding + px ) {
+						font-size: get-vw(30);
+					}
+				}
+			}
+		}
+		
+		.section {
+			@extend %font-rift;
+			position: absolute;
+			left: 0; top: -140px;
+			font-size: em(24);
+			font-weight: $bold;
+			color: $c-orange;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				top: get-vw(-140);
+				font-size: get-vw(24);
+			}
+		}	
+	}
+
+	&__item {
+		@extend %clear;
+		@extend %rel;
+		background-size: cover;
+		
+		&:nth-child(even) {
+			background-image: url(../img/bg/v--dark.png);
+			
+			.c-services__copy {
+				right: grid(140);
+				color: white;
+			}
+			
+			.c-squares {
+				left: 0;
+			}
+		}
+		
+		&:nth-child(odd) {
+			background-image: url(../img/bg/v--bright.png);
+			
+			.c-services__copy {
+				left: grid(140);
+			}
+			
+			.o-bgfoto {
+				float: right;
+			}
+
+			.c-squares {
+				right: 0;
+			}
+		}
+		
+	}
+	
+	&__news {
+		padding-top: 15px;
+		border-top: 2px solid $c-orange;
+		color: $c-orange;
+
+		dt {
+			@extend %font-rift;
+			float: left;
+			font-size: em(24);
+			line-height: 1;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				font-size: get-vw(24);
+			}
+		}
+		
+		dd {
+			float: right;
+			width: grid(465, 600);
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				font-size: get-vw(18);
+			}
+		}
+		
+		.date {
+			font-size: em(12);
+		}
+		
+		.title {
+			display: block;
+		}
+	}
+}
+

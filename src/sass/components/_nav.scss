@@ -1,0 +1,62 @@
+.c-nav {
+	margin-right: grid(135);
+	line-height: 1.2;
+	
+	h5 {
+		@extend %font-rift;
+		font-size: em(20);
+		color: $c-gray--brighter;
+	}
+	
+	&__link {
+		@extend %rel;
+	}
+
+	&__parent {
+		display: flex;
+		padding-bottom: 5px;
+
+		> li {
+			padding: 0 16px;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				padding: 0 get-vw(16);
+			}
+			
+			> a {
+				text-transform: uppercase;
+				font: {
+					family: $rift;
+					size: em(18);
+					weight: $bold;
+				}
+				
+				@media screen and ( max-width: $base + 2*$padding + px ) {
+					font-size: get-vw(18);
+				}
+				
+				@media screen and ( max-width: $desktop + px ) {
+					font-size: get-vw(22);
+				}
+
+				&:hover {
+					color: $c-orange;
+				}
+			}
+			
+			&:hover {
+				.c-subnav {
+					//display: block;
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+				}
+				
+				.c-nav__link {
+					color: $c-orange;
+				}
+			}
+		}
+	}
+}
+

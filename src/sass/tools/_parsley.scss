@@ -1,0 +1,16 @@
+.parsley-errors-list {
+	@extend %rel;
+	top: -22px;
+	
+	&.filled {
+
+		.parsley-type,
+		.parsley-required {
+			display: inline-block;
+			background-color: $c-orange;
+			color: white;
+			padding: 0 10px 0 20px;
+			font-size: em(14);
+		}
+	}
+}

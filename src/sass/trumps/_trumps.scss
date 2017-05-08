@@ -1,0 +1,40 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.arrow-after {
+	&:after {
+		content: ' ›';
+	}
+}
+
+.b-lazy {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out 100ms;
+}
+
+.b-loaded {
+	opacity: 1;
+}
+
+.is-hidden {
+	opacity: 0;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+/* IE */
+
+@media screen and (max-width:400px) {
+    @-ms-viewport{
+        width:320px;
+    }
+}
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}

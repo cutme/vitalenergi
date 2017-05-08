@@ -1,0 +1,77 @@
+.c-intro {
+	@extend %rel;
+	@extend %clear;
+	width: grid($base2);
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	
+	&--top {
+		padding-bottom: 330px;
+		top: -95px;
+		z-index: 10;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			padding-bottom: get-vw(330);
+			top: get-vw(-95);
+		}
+	}
+	
+	&--bottom {
+		z-index: 15;
+		top: -230px;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			top: get-vw(-230);
+		}
+	}
+
+	&__item {
+		@extend %anim;
+		float: left;
+		margin-right: grid(112, $base2);
+		width: grid(450, $base2);
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		&:hover {
+			transform: translateY(30px);
+			background-color: white;
+			color: $c-black;
+		}
+	}
+
+	&__photo {
+		@extend %rel;
+		margin-bottom: 50px;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			margin-bottom: get-vw(50);
+		}
+	}
+
+	figcaption {
+		padding: 0 30px;
+	}
+
+	p {
+		margin-bottom: 1.8em;
+		line-height: 1.8;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			margin-bottom: get-vw(35);
+			font-size: get-vw(18);
+		}
+	}
+	
+	.o-boxname {
+		font-size: em(26);
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			font-size: get-vw(26);
+		}
+	}
+}

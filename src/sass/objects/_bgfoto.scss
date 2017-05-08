@@ -1,0 +1,12 @@
+.o-bgfoto {
+	
+	@media screen and ( max-width: $base + 40 + px ) {
+		width: grid(745);
+	}
+	
+	&--narrow {
+		@media screen and ( max-width: $base + 40 + px ) {
+			width: grid(448);
+		}
+	}
+}

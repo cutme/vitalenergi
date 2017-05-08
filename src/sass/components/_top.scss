@@ -1,0 +1,16 @@
+.c-top {
+	@extend %rel;
+	z-index: 10;
+	height: 110px;
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		height: get-vw(110);
+	}
+
+	&__items {
+		@extend %flex;
+		height: 100%;
+		align-items: center;		
+		justify-content: flex-end;
+	}
+}

@@ -1,0 +1,113 @@
+.c-info {
+	padding-top: 10px;
+
+	h5 {
+		font-size: em(14);
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			font-size: get-vw(14);
+		}
+	}
+
+	&__iconlink {
+		display: flex;
+	    align-items: center;
+
+		i {
+			margin-right: 20px;
+			font-size: em(60);
+			color: $c-orange;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				margin-right: get-vw(20);
+				font-size: get-vw(60);
+			}
+		}
+		
+		span {
+			line-height: 1.1;
+			text-transform: uppercase;
+			font: {
+				weight: $bold;
+				size: em(16);
+			}
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				font-size: get-vw(16);
+			}
+		}
+	}
+	
+	&__pay {
+		display: flex;
+	    align-items: center;
+	    padding-top: 5px;
+
+		h5 {
+			padding-right: 40px;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				padding-right: get-vw(40);
+			}
+		}
+		
+		
+	}
+
+	&__row {
+		@extend %clear;
+		margin-bottom: 45px;
+	}
+	
+	&__select {
+		padding-top: 5px;
+	}
+	
+	&__twolines {
+		@extend %flex;
+		justify-content: space-between;
+
+		p {
+			display: block;
+			line-height: 1;
+			font: {
+				family: $rift;
+				size: em(21);
+				weight: $demi;
+			}
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				font-size: get-vw(21);
+			}
+		}
+		
+		small {
+			font: {
+				size: em(10);
+				weight: $bold;
+			}
+			text-transform: uppercase;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				font-size: get-vw(10);
+			}
+		}
+	}
+	
+	dt, dd {
+		float: left;
+	}
+	
+	dt {
+		width: grid(230, 600);
+		padding-right: 30px;		
+	}
+	
+	dd {
+		width: grid(370, 600);
+	}
+	
+	dt {}
+	
+	
+}

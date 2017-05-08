@@ -1,0 +1,93 @@
+.c-contact {
+	@extend %clear;
+	@extend %rel;
+	top: -110px;
+	width: grid($base2);
+	margin: 0 auto;
+	padding-left: 30px;
+	
+	article {
+		float: left;
+		width: grid(420, $base2);
+		
+		p {
+			margin-bottom: 50px;
+			line-height: 1.7;
+			font-size: em(18);
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				margin-bottom: get-vw(50);
+				font-size: get-vw(18);
+			}
+		}
+		
+		blockquote {
+			p {
+				line-height: 1.2;
+				font-size: em(24);
+				color: #7d7d7d;
+				
+				@media screen and ( max-width: $base + 2*$padding + px ) {
+					font-size: get-vw(24);
+				}
+			}
+			
+			a {
+				white-space: nowrap;
+				color: $c-orange;
+				
+				&:hover {
+					border-bottom: 1px solid $c-orange;
+				}
+			}
+		}
+	}
+
+	h3 {
+		@extend %font-rift;
+		margin-bottom: 40px;
+		font: {
+			size: em(60);
+			weight: $demi;
+		}
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			margin-bottom: get-vw(40);
+			font-size: get-vw(60);
+		}
+	}
+	
+	&__form {
+		float: right;
+		width: grid(1012, $base2);
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__fields {
+		float: left;
+		width: grid(450, 1012);
+		
+		input {
+			margin-bottom: 20px;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				margin-bottom: get-vw(20);
+			}
+		}
+
+		textarea {
+			height: 268px;
+			margin-bottom: 20px;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				height: get-vw(268);
+			}
+		}
+	}
+	
+	.o-btn {
+		float: right;
+		font-size: em(18);
+	}
+}

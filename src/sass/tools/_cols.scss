@@ -1,0 +1,10 @@
+.cols {
+	@media screen and ( min-width: $tablet_portrait + 1 +px ) {
+		column-count: 2;
+		column-gap: 40px;
+	}
+	
+	header {
+		column-span: all;  
+	}
+}

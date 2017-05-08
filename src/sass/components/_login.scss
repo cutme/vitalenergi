@@ -1,0 +1,28 @@
+.c-login {
+	@extend %flex;
+	@extend %rel;
+	margin-right: 35px;
+	font-size: em(16);
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		font-size: get-vw(16);
+	}
+	
+	@media screen and ( max-width: $desktop + px ) {
+		font-size: get-vw(20);
+	}
+	
+	&:hover {
+		color: $c-orange;
+	}
+	
+	i {
+		margin-left: 15px;
+		font-size: em(28);
+		color: $c-black;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			font-size: get-vw(28);
+		}
+	}
+}

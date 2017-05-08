@@ -1,0 +1,58 @@
+.c-quick {
+	background-color: $c-gray;
+	padding-top: 65px;
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		padding-top: get-vw(65);
+	}
+	
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: grid($base2);
+		margin: 0 auto;
+	}
+	
+	&__item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: column;
+		
+		width: grid(390, $base2);
+		margin: 0 30px;
+		padding: 60px 0;
+		border-top: 2px solid $c-orange;
+		color: white;
+		
+		@media screen and ( max-width: $base + 2*$padding + px ) {
+			padding: get-vw(60) 0;
+		}
+		
+		h4 {
+			@extend %font-rift;
+			margin-bottom: 35px;
+			font-size: em(26);
+			line-height: 1;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				margin-bottom: get-vw(35);
+				font-size: get-vw(26);
+			}
+		}
+		
+		p {
+			margin-bottom: 70px;
+			line-height: 1.7;
+			
+			@media screen and ( max-width: $base + 2*$padding + px ) {
+				margin-bottom: get-vw(70);
+				font-size: get-vw(18);
+			}
+		}
+	}
+	
+	.o-btn {
+		border-color: rgba(#b5b5b5, .65);
+	}
+}

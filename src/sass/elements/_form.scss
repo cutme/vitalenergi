@@ -1,0 +1,89 @@
+button, input, textarea {
+	background-color: transparent;
+	border: none;
+	border-color: inherit;
+	border-radius: 0;
+	font-family: $text;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input, textarea {
+	width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+	text-rendering: optimizeLegibility; 
+	
+	font: {
+		family: $text;
+	}
+	cursor: text;
+	color: inherit;
+}
+
+textarea,
+input[type=text],input[type=tel], input[type=email] {
+	background-color: white;
+	padding: 0 20px;
+	font-size: em(18);
+	color: #848484;
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		font-size: get-vw(18);
+	}
+}
+
+input {
+	height: 52px;
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		height: get-vw(52);
+	}
+}
+
+textarea {
+	padding-top: 15px;
+	
+	@media screen and ( max-width: $base + 2*$padding + px ) {
+		padding-top: get-vw(15);
+	}
+}
+
+button {
+	@extend %anim;
+}
+
+
+@include input-placeholder {
+	color: $c-gray;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+::-webkit-input-placeholder {color: inherit;}
+:-moz-placeholder {color: inherit; }
+::-moz-placeholder {color: inherit; }
+:-ms-input-placeholder { color: inherit; }
+
+input[type=checkbox]:not(old) {
+	display: none;
+}
+
