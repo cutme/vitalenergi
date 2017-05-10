@@ -1,5 +1,5 @@
 .nice-select {
-	position: relative;
+	@extend %rel;
 	-webkit-tap-highlight-color: transparent;
 	
 	background-color: transparent;
@@ -31,10 +31,16 @@
 	}
 	color: #d8d9da;
 	
-	@media screen and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		font-size: get-vw(18);
 		height: get-vw(48);
 		line-height: get-vw(46);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		font-size: get-vw-mob(27);
+		height: get-vw-mob(72);
+		line-height: get-vw-mob(70);
 	}
 }
   
@@ -54,6 +60,14 @@
 		display: block;
 		content: ' ';
 		right: 45px; top: 0;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			right: get-vw-mob-land(45);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			right: get-vw-mob(45);
+		}
 	}
 }
 
@@ -61,17 +75,30 @@
 	position: absolute;
 	right: 0; top: 0;
 	display: block;
-	font-family: 'icomoon' !important;
+	font-family: 'icomoon';
+	content: ' ';
 	content: "\e900";
 	width: 48px; height: 46px;
 	padding-left: 4px;
 	text-align: center;
 	font-size: em(16);
 	color: $c-orange;
+	transform-origin: 50% 50%;
 	transition: all 0.15s ease-in-out;
+	
+	@media screen and ( max-width: $tablet + px ) {
+		width: get-vw-mob-land(48); height: get-vw-mob-land(46);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: get-vw-mob(48); height: get-vw-mob(70);
+	}
+
+	
 }
 
 .nice-select.open:after {
+	//transform: scaleY(-1) translateY(16%);
 	transform: rotate(-180deg);
 }
 
@@ -88,7 +115,7 @@
 }
 
 .nice-select.disabled:after {
-	border-color: #cccccc;
+	border-color: #ccc;
 }
 
 .nice-select .list {
@@ -126,7 +153,7 @@
 	text-align: left;
 	transition: all 0.2s;
 	
-	@media screen and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		min-height: get-vw(40);
 	}
 }

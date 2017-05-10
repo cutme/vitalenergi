@@ -1,11 +1,20 @@
 .c-info {
 	padding-top: 10px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) { 
+		padding-top: 30px;
+	}
 
 	h5 {
 		font-size: em(14);
 		
-		@media screen and ( max-width: $base + 2*$padding + px ) {
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 			font-size: get-vw(14);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: get-vw-mob(30);
+			font-size: get-vw-mob(24);
 		}
 	}
 
@@ -18,9 +27,14 @@
 			font-size: em(60);
 			color: $c-orange;
 			
-			@media screen and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				margin-right: get-vw(20);
 				font-size: get-vw(60);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				margin-right: get-vw-mob(20);
+				font-size: get-vw-mob(50);
 			}
 		}
 		
@@ -32,31 +46,54 @@
 				size: em(16);
 			}
 			
-			@media screen and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(16);
 			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(32);
+			}
+			
+			
 		}
 	}
 	
 	&__pay {
-		display: flex;
-	    align-items: center;
-	    padding-top: 5px;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			display: flex;
+		    align-items: center;
+		    padding-top: 5px;
+		}
 
 		h5 {
-			padding-right: 40px;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				padding-right: 40px;
+			}
 			
-			@media screen and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				padding-right: get-vw(40);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(24);
 			}
 		}
 		
-		
+		.o-btn {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: flex;
+				justify-content: center;
+			}
+		}	
 	}
 
 	&__row {
 		@extend %clear;
 		margin-bottom: 45px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) { 
+			margin-bottom: get-vw-mob(45);
+		}
 	}
 	
 	&__select {
@@ -64,8 +101,20 @@
 	}
 	
 	&__twolines {
-		@extend %flex;
-		justify-content: space-between;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: get-vw-mob(80);
+		}
+		
+		> div {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				margin-bottom: get-vw-mob(30);
+			}
+		}
 
 		p {
 			display: block;
@@ -76,8 +125,13 @@
 				weight: $demi;
 			}
 			
-			@media screen and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(21);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				margin-bottom: get-vw-mob(15);
+				font-size: get-vw-mob(44);
 			}
 		}
 		
@@ -88,26 +142,42 @@
 			}
 			text-transform: uppercase;
 			
-			@media screen and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(10);
+			}
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(20);
 			}
 		}
 	}
 	
 	dt, dd {
-		float: left;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			float: left;
+		}
 	}
 	
 	dt {
-		width: grid(230, 600);
-		padding-right: 30px;		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			width: grid(230, 600);
+			padding-right: 30px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: get-vw-mob(30);
+		}
+		
+		br {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none;
+			}
+		}
 	}
 	
 	dd {
-		width: grid(370, 600);
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			width: grid(370, 600);
+		}
 	}
-	
-	dt {}
-	
-	
 }
