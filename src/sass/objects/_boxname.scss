@@ -9,7 +9,7 @@
 	line-height: 1.1;
 	color: white;
 	
-	@media screen and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		letter-spacing: get-vw(3);
 		left: get-vw(30);
 		top: get-vw(190);

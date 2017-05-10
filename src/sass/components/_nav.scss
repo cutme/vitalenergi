@@ -2,6 +2,10 @@
 	margin-right: grid(135);
 	line-height: 1.2;
 	
+	@media screen and ( max-width: $tablet + px ) {
+		display: none;
+	}
+	
 	h5 {
 		@extend %font-rift;
 		font-size: em(20);

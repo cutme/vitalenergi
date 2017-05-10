@@ -12,6 +12,10 @@
 		font-size: get-vw(20);
 	}
 	
+	@media screen and ( max-width: $tablet + px ) {
+		display: none;
+	}
+	
 	&:hover {
 		color: $c-orange;
 	}

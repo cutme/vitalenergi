@@ -5,6 +5,7 @@
         return {
         	exist: exist,
         	blazy: blazy,
+        	mobileMenu: mobileMenu,
         	nSelect: nSelect
         };
     };
@@ -15,13 +16,7 @@
 	
 	function blazy() {
 
-		var bLazy = new Blazy({
-			
-			breakpoints: [{
-			    width: 420, 
-			    src: 'data-src-small'
-			}], 
-			
+		var bLazy = new Blazy({			
 			success: function(element){
 			    setTimeout(function(){					
 					var parent = element.parentNode.parentNode;
@@ -29,6 +24,17 @@
 			    }, 200);
 	        }
 	   });
+	}
+	
+	function mobileMenu() {
+		$("#menu").mmenu({
+           "extensions": [
+              "pagedim-black"
+           ],
+           "offCanvas": {
+              "position": "right"
+           }
+        });
 	}
 	
 	function nSelect() {

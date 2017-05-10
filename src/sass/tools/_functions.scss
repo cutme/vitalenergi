@@ -5,3 +5,19 @@
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
 }
+
+@function get-vw($target) {
+	$vw-context: (1830 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-mob-land($target) {
+	$vw-context: (1024 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-mob($target) {
+	$vw-context: (768 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+

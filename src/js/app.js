@@ -8,6 +8,7 @@
 	ve.helper.blazy();
 
 	$(document).ready(function() {
+		ve.helper.exist('#menu') && ve.helper.mobileMenu();
 		ve.helper.exist('.nice-select') && ve.helper.nSelect();
 	});
 

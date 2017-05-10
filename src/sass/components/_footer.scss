@@ -1,12 +1,38 @@
 .c-footer {
-	padding: 40px 15px 30px 40px;
-	font-size: em(14);
+	padding: {
+		top: 40px;
+	}
 	color: $c-gray;
+	
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		padding: {
+			bottom: 30px;
+			left: 15px;
+			right: 30px;
+		}
+		font-size: em(14);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding-bottom: get-vw-mob(30);
+	}
 	
 	dt, dd {
 		display: inline-block;
 		padding-right: 25px;
 		vertical-align: middle;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			padding-right: get-vw-mob(25);
+		}
+	}
+	
+	dd {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			&:last-of-type {
+				padding: 0;
+			}
+		}
 	}
 	
 	dt {
@@ -19,9 +45,25 @@
 	}
 	
 	&__connect {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+			padding: 0 grid(44, $base3);
+		}
+    
+		dt {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(22);
+			}
+		}
 
 		i {
 			font-size: em(26);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(50);
+			}
 		}
 		
 		a {
@@ -38,13 +80,35 @@
 	}
 	
 	&__nav {
-		padding-right: 10px;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			padding-right: 10px;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			
+		}
+		
+		ul {
+			@media screen and ( max-width: $tablet_portrait + 1 + px ) {
+				display: flex;
+			    align-items: center;
+			    justify-content: space-between;
+			    margin-bottom: get-vw-mob(40);
+			    padding: grid(44, $base3);
+			    border-top: 2px solid #828282;
+			    border-bottom: 2px solid #828282;
+			}
+		}
 
 		li {
-			display: inline-block;
-			padding: 0 20px;
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				display: inline-block;
+				padding: 0 20px;
+			}
 			
 			a {
+				font-size: get-vw-mob(18);
+
 				&:hover {
 					color: $c-orange;
 				}
@@ -54,23 +118,51 @@
 	
 	&__copyrights,
 	&__sales {
-		float: left;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			float: left;
+		}
 	}
 	
 	&__connect,
 	&__nav {
-		float: right;
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			float: right;
+		}
+	}
+	
+	&__copyrights {
+		@media screen and ( max-width: $tablet_portrait + 1 + px ) {
+			text-align: center;
+			font-size: get-vw-mob(18);
+		}
 	}
 	
 	&__row {
 		@extend %clear;
 		padding-bottom: 30px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding-bottom: get-vw-mob(30);
+		}
 	}
 	
 	&__sales {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    
+			margin-bottom: get-vw-mob(60);
+			padding: 0 grid(44, $base3);
+			font-size: get-vw-mob(22);
+		}
+		
 		a {
-			font-size: em(16, 14);
 			color: $c-orange;
+			
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+				font-size: em(14);
+			}
 			
 			&:hover {
 				border-bottom: 1px solid $c-orange;

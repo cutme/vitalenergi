@@ -1,0 +1,13 @@
+.c-hamburger {
+	font-size: em(22);
+	color: $c-orange;
+	
+	@media screen and ( min-width: $tablet + 1 + px ) {
+		display: none;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin-right: 44px;
+		font-size: get-vw-mob(32);
+	}
+}

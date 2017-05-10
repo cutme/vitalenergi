@@ -1,7 +1,18 @@
 .o-bgfoto {
 	
-	@media screen and ( max-width: $base + 40 + px ) {
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 40 + px ) {
 		width: grid(745);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin-bottom: 70px;
+		
+	}
+	
+	&--extramargin {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: get-vw-mob(230);
+		}
 	}
 	
 	&--narrow {

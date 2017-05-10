@@ -23,11 +23,6 @@
   }
 }
 
-@function get-vw($target) {
-	$vw-context: (1830 * 0.01);
-	@return ($target / $vw-context) * 1vw;
-}
-
 @mixin icomoon {
 	font-family: 'icomoon' !important;
 	speak: none;

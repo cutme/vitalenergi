@@ -1,7 +1,11 @@
 .c-search {
 	@extend %rel;
 	float: right;
-	width: 210px;
+	width: grid(210);
+	
+	@media screen and ( max-width: $tablet + px ) {
+		display: none;
+	}
 	
 	input[type=text] {
 		border-bottom: 1px solid #ebeced;
@@ -20,11 +24,13 @@
 	button {
 		@extend %abs;
 		@extend %anim;
-		right: 0; top: 5px;
+		right: 0; top: 15px;
 		font-size: em(22);
 		
 		@media screen and ( max-width: $base + 2*$padding + px ) {
 			font-size: get-vw(22);
+			top: get-vw(15);
+			
 		}
 		
 		&:hover {

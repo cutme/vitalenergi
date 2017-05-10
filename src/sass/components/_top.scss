@@ -1,10 +1,21 @@
 .c-top {
 	@extend %rel;
 	z-index: 10;
+	background-color: white;
 	height: 110px;
 	
-	@media screen and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		height: get-vw(110);
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		position: fixed;
+		left: 0; top: 0;
+		width: 100%;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		height: get-vw-mob(110);
 	}
 
 	&__items {
@@ -12,5 +23,9 @@
 		height: 100%;
 		align-items: center;		
 		justify-content: flex-end;
+	}
+	
+	.mm-opened & {
+		opacity: .6;
 	}
 }

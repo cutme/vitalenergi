@@ -1,3 +1,11 @@
 body {
-	background-color: white;
+	background-color: #f6f6f6;
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding-top: get-vw(110);
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding-top: get-vw-mob(110);
+	}
 }

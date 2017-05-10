@@ -1,0 +1,170 @@
+.mm-menu {
+
+	&__login {
+		a {
+			
+			color: $c-orange ;
+		}
+	}
+	
+	.mm-listview {
+		
+		.mm-next {
+			&:after,
+			&:before {
+				width: 15px;
+				height: 15px;
+				
+				
+			}
+			
+			&:before {
+				display: none;
+			}
+			
+			&:after {
+				border-color: $c-black !important;
+			}
+		}
+		
+		> li.mm-menu__login {
+			a {
+			    display: flex;
+			    justify-content: space-between;
+			    font-size: get-vw-mob-land(26);
+				color: $c-orange;
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					font-size: get-vw-mob(26);
+				}
+				
+				i {
+					margin-right: 10px;
+					font-size: get-vw-mob-land(30);
+					
+					@media screen and ( max-width: $tablet_portrait + px ) {
+						font-size: get-vw-mob(30);
+					}
+					
+				}
+			}
+			
+		}
+	
+		> li:not(.mm-divider):after {
+			left: 0;
+		}
+		
+		> li a:not(.mm-next) {
+			display: flex;
+			align-items: center;
+		}
+		
+		> li {
+			a {
+				padding-left: get-vw-mob-land(50);
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					padding-left: get-vw-mob(50);
+				}
+			}
+		}
+		
+		> li:not(.mm-menu__login) {
+			a {
+				letter-spacing: 2px;
+				font: {
+					family: $rift;
+					size: get-vw-mob-land(30);
+					weight: $bold;
+				}
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					font-size: get-vw-mob(30);
+				}
+			}
+		}
+		
+		>li > a, li > span {
+			height: get-vw-mob-land(120);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				height: get-vw-mob(120);
+			}
+		}
+	}
+	
+	.mm-navbar {
+		height: get-vw-mob-land(120);
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: get-vw-mob(120);
+		}
+		
+		.mm-btn {
+			&:first-child {
+			    top: 50%;
+			    transform: translateY(-50%);
+			    width: 60px;
+			    content: ' ';
+			}
+		}
+		
+		.mm-next:after,
+		.mm-prev:before {
+			width: 15px;
+			height: 15px;
+			border-color: $c-orange;
+		}
+		
+		a, >* {	
+			text-transform: uppercase;
+			font: {
+				family: $rift;
+				size: get-vw-mob-land(30);
+				weight: $bold;
+			}
+			color: $c-orange;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: get-vw-mob(30);
+			}
+		}
+	}
+	
+	
+	.mm-panel {
+		&.mm-hasnavbar {
+			.mm-navbar {
+				display: flex;
+			    align-items: center;
+			    justify-content: center;
+				background-color: white;
+			}
+		}
+	}
+	
+	.mm-panels {
+	
+		> .mm-panel > .mm-listview:first-child, 
+		> .mm-panel > .mm-navbar + .mm-listview {
+			margin-top: 0;
+		}
+	
+		> .mm-panel {
+			&.mm-hasnavbar {
+				padding-top: get-vw-mob-land(120);
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					padding-top: get-vw-mob(120);
+				}
+			}
+		}
+	}
+	
+	.mm-panels>.mm-panel:after, 
+	.mm-panels>.mm-panel:before {
+		display: none;
+	}
+	
+}

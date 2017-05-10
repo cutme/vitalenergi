@@ -17,6 +17,7 @@
   "dependencies": {
     "bLazy": "blazy#^1.8.2",
     "jquery-nice-select": "^1.1.0",
-    "parsleyjs": "^2.6.2"
+    "parsleyjs": "^2.6.2",
+    "jQuery.mmenu": "mmenu#^6.0.2"
   }
 }

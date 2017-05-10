@@ -12,13 +12,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
 
+	<link href="css/libs.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 	
 		
-	<div class="c-top">
+	<div class="c-top Fixed">
 		<div class="o-wrap">
 			<a href="index.html" class="c-logo">
 				<img src="img/logo-vital-energi.svg" width="133" height="56" alt="Vital Energi">
@@ -232,6 +233,8 @@
 					<input type="text" placeholder="Search">
 					<button type="submit" class="icon-lens"></button>
 				</div>
+				
+				<a href="#menu" class="icon-hamburger c-hamburger js-nav"></a>
 			</div>
 		</div>
 	</div>
@@ -264,24 +267,38 @@
 					</article>					
 				</div>
 
-				<div class="o-bgfoto">
+				<picture class="o-bgfoto o-bgfoto--extramargin">
+					<source 
+							media="(max-width: 768px)" 
+							srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+							data-srcset="img/services/design--lp.jpg">
 					<img 
 						class="b-lazy" 
-						src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" 
-						data-src="img/services/design-lp.jpg" 
-						alt="" width="753" height="994">
-				</div>
+						src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+						data-src="img/services/design--lp@2x.jpg" alt="Our services">
+				</picture>
 			</li>
 
-			<li class="c-services__item ">
+			<li class="c-services__item">
 			
 				<ul class="c-intro c-intro--top color-white">
 					<li class="c-intro__item">
 						<figure>
+							
+							
 							<div class="c-intro__photo">
 								<span class="o-boxname">Design<br> capabilities</span>
 								
-								<img src="img/services/design/design-capabilities--lp.jpg" alt="design capabilities" width="450" height="298">
+								<picture>
+									<source 
+											media="(max-width: 768px)" 
+											srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+											data-srcset="img/services/design/design-capabilities--lp@2x.jpg">
+									<img 
+										class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+										data-src="img/services/design/design-capabilities--lp.jpg" alt="Design capabilities">
+								</picture>
 							</div>				
 							
 							<figcaption>
@@ -305,7 +322,17 @@
 						<figure>
 							<div class="c-intro__photo">
 								<span class="o-boxname">Build</span>
-								<img src="img/services/design/build--lp.jpg" alt="build" width="450" height="298">
+								
+								<picture>
+									<source 
+											media="(max-width: 768px)" 
+											srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+											data-srcset="img/services/design/build--lp@2x.jpg">
+									<img 
+										class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+										data-src="img/services/design/build--lp.jpg" alt="Build">
+								</picture>
 							</div>
 							
 							<figcaption>
@@ -329,8 +356,18 @@
 					<li class="c-intro__item">
 						<figure>
 							<div class="c-intro__photo">
-								<span class="o-boxname">Design<br> capabilities</span>
-								<img src="img/services/design/operation--lp.jpg" alt="Operation &amp; maintenance" width="450" height="298">
+								<span class="o-boxname">Operation<br> &amp; maintenance</span>
+								
+								<picture>
+									<source 
+											media="(max-width: 768px)" 
+											srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+											data-srcset="img/services/design/operation--lp@2x.jpg">
+									<img 
+										class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+										data-src="img/services/design/operation--lp.jpg" alt="Operation &amp; maintenance">
+								</picture>
 							</div>
 							
 							<figcaption>
@@ -352,14 +389,23 @@
 				</ul>
 			</li>
 			
-			<li class="c-services__item">
+			<li class="c-services__item c-services__item--mobile">
 				<ul class="c-intro c-intro--bottom">
 					<li class="c-intro__item">
 						<figure class="color-black">
 							<div class="c-intro__photo">
 								<span class="o-boxname">Sheq</span>
 								
-								<img src="img/services/design/sheq--lp.jpg" alt="Sheq" width="450" height="298">
+								<picture>
+									<source 
+											media="(max-width: 768px)" 
+											srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+											data-srcset="img/services/design/sheq--lp@2x.jpg">
+									<img 
+										class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+										data-src="img/services/design/sheq--lp.jpg" alt="Sheq">
+								</picture>
 							</div>				
 							
 							<figcaption>
@@ -385,8 +431,18 @@
 					<li class="c-intro__item">
 						<figure>
 							<div class="c-intro__photo">
-								<span class="o-boxname">Stakeholder management</span>
-								<img src="img/services/design/stakeholder--lp.jpg" alt="Stakeholder management" width="450" height="298">
+								<span class="o-boxname">Stakeholder<br> management</span>
+								
+								<picture>
+									<source 
+											media="(max-width: 768px)" 
+											srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+											data-srcset="img/services/design/stakeholder--lp@2x.jpg">
+									<img 
+										class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+										data-src="img/services/design/stakeholder--lp.jpg" alt="Stakeholder management">
+								</picture>
 							</div>
 							
 							<figcaption>
@@ -541,10 +597,6 @@
 			</div>
 			
 			<div class="c-footer__row">
-				<div class="c-footer__copyrights">
-					Copyright &copy; 2016 Vital Energi Ltd. All rights reserved.
-				</div>			
-				
 				<nav class="c-footer__nav">
 					<ul>
 						<li>
@@ -568,15 +620,92 @@
 						</li>					                                            
 					</ul>
 				</nav>
+				
+				<div class="c-footer__copyrights">
+					Copyright &copy; 2016 Vital Energi Ltd. All rights reserved.
+				</div>
 			</div>
 		</div>
 
 		
 	</div>
 
+ 
+	<nav id="menu">
+	<ul>
+		<li class="mm-menu__login">
+			<a href="#">Site login <i class="icon-power"></i></a>
+		</li>
 
+		<li>
+			<a href="#">Our Services</a>
+			
+			<ul>				
+				<li>
+					<a href="#">Energy solutions</a>
+					
+					<ul>
+						<li>
+							<a href="#">Complete energy Solution</a>
+						</li>
+						
+						<li>
+							<a href="#">ESCO</a>
+						</li>
+						
+						<li>
+							<a href="#">Energy Efficiency</a>
+						</li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="#">Design, Build, Operate, Maintain</a>
+				</li>
+				
+				<li>
+					<a href="#">District Heating &amp; cooling</a>
+				</li>
+				
+				<li>
+					<a href="#">Energy centers</a>
+				</li>
+				
+				<li>
+					<a href="#">Hius, metering &amp; billing</a>
+				</li>
+			</ul>
+		</li>
 
-
+		<li>
+			<a href="#">Home Customers</a>		
+		</li>
+		
+		<li>
+			<a href="#">About us</a>
+		</li>
+		
+		<li>
+			<a href="#">Sectors</a>
+		</li>
+		
+		<li>
+			<a href="#">Case Studies</a>
+		</li>
+		
+		<li>
+			<a href="#">Careers</a>
+		</li>
+		
+		<li>
+			<a href="#">News</a>
+		</li>
+		
+		<li>
+			<a href="#">Contact</a>
+		</li>
+	</ul>
+</nav>
 	
 <script src="js/libs.js"></script>
 <script src="js/script.js"></script>

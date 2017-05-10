@@ -1,12 +1,12 @@
 .c-logo {
 	@extend %centerY;
 	left: 20px;
-	
-	img {
-		@extend %img;
+
+	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+		width: get-vw(133);
 	}
 	
-	@media screen and ( max-width: $base + 2*$padding + px ) {
-		width: get-vw(133);
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: get-vw-mob(133);
 	}
 }
