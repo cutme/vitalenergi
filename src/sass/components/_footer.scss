@@ -28,11 +28,11 @@
 	}
 	
 	dd {
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		//@media screen and ( max-width: $tablet_portrait + px ) {
 			&:last-of-type {
 				padding: 0;
 			}
-		}
+		//}
 	}
 	
 	dt {
@@ -81,7 +81,7 @@
 	
 	&__nav {
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
-			padding-right: 10px;
+			//padding-right: 10px;
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
@@ -101,13 +101,19 @@
 		}
 
 		li {
+			&:last-child {
+				padding-right: 0;	
+			}
+
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 				display: inline-block;
-				padding: 0 20px;
+				padding: 0 get-vw(20);
 			}
 			
 			a {
-				font-size: get-vw-mob(18);
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					font-size: get-vw-mob(18);
+				}
 
 				&:hover {
 					color: $c-orange;

@@ -1,7 +1,8 @@
 body {
 	background-color: white;
+	padding-top: 110px;
 	
-	@media screen and ( max-width: $tablet + px ) {
+	@media screen and ( max-width: $base + 40 + px ) {
 		padding-top: get-vw(110);
 	}
 	
