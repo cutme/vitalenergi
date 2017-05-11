@@ -16,12 +16,12 @@
 	
 	function blazy() {
 
-		var bLazy = new Blazy({			
+		var bLazy = new Blazy({
+			breakpoints: false,	
 			success: function(element){
 			    setTimeout(function(){					
 					var parent = element.parentNode.parentNode;
 					parent.className = parent.className.replace(/\bis-hidden\b/,'');
-					console.log('f');
 			    }, 200);
 	        }
 	   });

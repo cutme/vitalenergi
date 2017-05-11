@@ -3,15 +3,89 @@
 	top: 70%;
 	left: 30px;
 	z-index: 10;
-	text-transform: uppercase;
-	font-weight: $bold;
-	letter-spacing: 3px;
-	line-height: 1.1;
 	color: white;
 	
 	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
-		letter-spacing: get-vw(3);
 		left: get-vw(30);
 		top: get-vw(190);
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		line-height: .2;
+	}
+	
+	.c-squares__item--news & {
+		top: 0;
+		left: 0;
+		width: 100%; height: 100%;
+		padding: 45px 30px;
+		
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    flex-direction: column;
+	    
+	    @media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			padding: get-vw(45) get-vw(30);
+		}
+
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding: get-vw-mob(45) get-vw-mob(30);
+		}
+	}
+	
+	&__date {
+		font: {
+			family: $proxima;
+			size: em(14, 20);
+			weight: $semibold;
+		}
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			font-size: get-vw(14);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: get-vw-mob(14);
+		}
+	}
+	
+	&__subtitle {
+		display: block;
+		margin-bottom: 10px;
+		font: {
+			size: em(20);
+			weight: $bold;
+		}
+		letter-spacing: 2px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			margin-bottom: get-vw(10);
+			font-size: get-vw(20);
+			letter-spacing: get-vw(2);
+		}
+
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			font-size: get-vw-mob(20);
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			line-height: 1.1;
+		}
+	}
+	
+	&__title {		
+		text-transform: uppercase;
+		font-weight: $bold;
+		letter-spacing: 3px;
+		line-height: 1.1;
+		
+		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			letter-spacing: get-vw(3);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: get-vw-mob(10);
+		}		
 	}
 }
