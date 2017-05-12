@@ -43,7 +43,7 @@
 			//margin-bottom: 120px;
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
-				margin-bottom: get-vw(120);
+				//margin-bottom: get-vw(120);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {
@@ -62,10 +62,7 @@
 				
 				@media screen and ( max-width: $desktop + px ) {
 					line-height: 1.4;
-				}
-				
-				@media screen and ( max-width: $tablet + px ) {
-					//line-height: 1.4;
+					font-size: get-vw-desk(22);
 				}
 				
 				@media screen and ( max-width: $tablet_portrait + px ) {
