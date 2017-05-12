@@ -27,9 +27,17 @@
 			line-height: 1.7;
 			font-size: em(18);
 			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 				margin-bottom: get-vw(50);
+			}
+			
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(18);
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				font-size: get-vw-desk(22);
+				line-height: 1.4;
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {
@@ -44,8 +52,13 @@
 				font-size: em(24);
 				color: #7d7d7d;
 				
-				@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+				@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 					font-size: get-vw(24);
+				}
+				
+				@media screen and ( max-width: $desktop + px ) {
+					font-size: get-vw-desk(26);
+					line-height: 1.4;
 				}
 				
 				@media screen and ( max-width: $tablet_portrait + px ) {
@@ -99,12 +112,16 @@
 			float: left;
 			width: grid(450, 1012);
 		}
-		
+
 		input {
 			margin-bottom: 20px;
 			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				margin-bottom: get-vw(20);
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				margin-bottom: get-vw-desk(20);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {
@@ -116,8 +133,12 @@
 			height: 268px;
 			margin-bottom: 20px;
 			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				height: get-vw(268);
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				height: get-vw-desk(268);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {

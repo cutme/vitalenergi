@@ -16,10 +16,14 @@
 		color: white;
 	}
 	
-	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		height: get-vw(48);
 		padding: 0 get-vw(35);
 		font-size: get-vw(18);		
+	}
+	
+	@media screen and ( max-width: $desktop + px ) {
+		font-size: get-vw-desk(18);
 	}
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {
@@ -38,6 +42,9 @@ button.o-btn {
 		display: inline-flex;
 	    align-items: center;
 	}
+
+	
+	
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {
 		width: 100%;

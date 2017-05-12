@@ -10,20 +10,23 @@
 		top: get-vw(190);
 	}
 	
-	@media screen and ( max-width: $smartphone + px ) {
-		line-height: .2;
+	br {
+		@media screen and ( max-width: $tablet + px ) {
+			display: none;
+		}
 	}
-	
+
 	.c-squares__item--news & {
 		top: 0;
 		left: 0;
 		width: 100%; height: 100%;
 		padding: 45px 30px;
-		
+
 	    display: flex;
 	    flex-wrap: wrap;
 	    justify-content: space-between;
 	    flex-direction: column;
+        align-items: baseline;
 	    
 	    @media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 			padding: get-vw(45) get-vw(30);
@@ -41,8 +44,12 @@
 			weight: $semibold;
 		}
 		
-		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+		@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 			font-size: get-vw(14);
+		}
+		
+		@media screen and ( max-width: $desktop + px ) {
+			font-size: get-vw(20);
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
@@ -59,33 +66,40 @@
 		}
 		letter-spacing: 2px;
 		
-		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+		@media screen and ( min-width: $tablet + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 			margin-bottom: get-vw(10);
 			font-size: get-vw(20);
 			letter-spacing: get-vw(2);
 		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font-size: get-vw-mob-land(14);
+			letter-spacing: get-vw(1);
+		}
 
 		@media screen and ( max-width: $tablet_portrait + px ) {
-			font-size: get-vw-mob(20);
-		}
-		
-		@media screen and ( max-width: $smartphone + px ) {
-			line-height: 1.1;
+			font-size: get-vw-mob(22);
 		}
 	}
 	
-	&__title {		
+	&__title {
+		display: block;
 		text-transform: uppercase;
+		font-size: em(20);
 		font-weight: $bold;
-		letter-spacing: 3px;
-		line-height: 1.1;
+		letter-spacing: 2px;
+		//line-height: normal;
 		
-		@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+		@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 			letter-spacing: get-vw(3);
 		}
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
-			margin-bottom: get-vw-mob(10);
-		}		
+		@media screen and ( max-width: $tablet + px ) {
+			letter-spacing: get-vw-mob-land(2);
+		}
+
+		@media screen and ( max-width: $tablet + px ) {
+			//letter-spacing: get-vw-mob(20);
+		}
 	}
 }

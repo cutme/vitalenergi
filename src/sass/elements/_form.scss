@@ -31,8 +31,12 @@ input[type=text],input[type=tel], input[type=email] {
 	font-size: em(18);
 	color: #848484;
 	
-	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		font-size: get-vw(18);
+	}
+	
+	@media screen and ( max-width: $desktop + px ) {
+		font-size: get-vw-desk(18);
 	}
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {
@@ -43,8 +47,12 @@ input[type=text],input[type=tel], input[type=email] {
 input {
 	height: 52px;
 	
-	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+	@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 		height: get-vw(52);
+	}
+	
+	@media screen and ( max-width: $desktop + px ) {
+		height: get-vw-desk(52);
 	}
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {

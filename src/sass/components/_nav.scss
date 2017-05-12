@@ -36,11 +36,11 @@
 				}
 				
 				@media screen and ( max-width: $base + 2*$padding + px ) {
-					font-size: get-vw(18);
+					font-size: get-vw(20);
 				}
 				
 				@media screen and ( max-width: $desktop + px ) {
-					font-size: get-vw(22);
+					font-size: get-vw(24);
 				}
 
 				&:hover {

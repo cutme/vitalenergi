@@ -66,6 +66,8 @@
 	&__item {
 		@extend %rel;
 		display: block;
+		line-height: normal;
+		overflow: hidden;
 		
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 			width: grid(300, 900);
@@ -139,8 +141,12 @@
 		&__title {
 			font-size: em(22);
 
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+			@media screen and ( min-width: $tablet + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(22);
+			}
+			
+			@media screen and ( max-width: $tablet + px ) {
+				font-size: get-vw-mob-land(14);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {

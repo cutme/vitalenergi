@@ -15,10 +15,15 @@
 			margin-bottom: get-vw(30);
 		}
 		
+		@media screen and ( max-width: $tablet + px ) {
+			line-height: 1;
+		}
+		
 		@media screen and ( max-width: $tablet_portrait + px ) {
 			font-size: get-vw-mob(80);
 			margin-bottom: get-vw-mob(30);
 		}
+
 	}
 	
 	&__copy {
@@ -35,7 +40,7 @@
 		}
 		
 		article {
-			margin-bottom: 120px;
+			//margin-bottom: 120px;
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				margin-bottom: get-vw(120);
@@ -44,18 +49,33 @@
 			@media screen and ( max-width: $tablet_portrait + px ) {
 				margin-bottom: get-vw-mob(80);
 			}
+
 			
 			p {
 				margin-bottom: 1.7em;
 				line-height: 1.7;
 				
-				@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+				@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 					margin-bottom: get-vw(35);
 					font-size: get-vw(18);
 				}
 				
+				@media screen and ( max-width: $desktop + px ) {
+					line-height: 1.4;
+				}
+				
+				@media screen and ( max-width: $tablet + px ) {
+					//line-height: 1.4;
+				}
+				
 				@media screen and ( max-width: $tablet_portrait + px ) {
 					font-size: get-vw-mob(24);
+				}
+				
+				&:last-of-type {
+					@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+						margin: 0;
+					}
 				}
 			}			
 
@@ -88,19 +108,25 @@
 		
 		.section {
 			@extend %font-rift;
+			
 			font: {
 				size: em(24);
 				weight: $bold;
 			}
-			color: $c-orange;
+			color: $c-orange;	
 			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+			@media screen and ( min-width: $desktop + 1 + px ) {
 				position: absolute;
-				left: 0; top: -140px;
+				left: 0;
+			}
+
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
+				top: get-vw(-140);
+				font-size: get-vw(24);
 			}
 			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
-				top: get-vw(-140);
+			@media screen and ( max-width: $desktop + px ) {
+				//top: get-vw-desk(-70);
 				font-size: get-vw(24);
 			}
 			
@@ -109,6 +135,8 @@
 				font-size: get-vw-mob(24);
 			}
 		}	
+		
+		
 	}
 
 	&__item {
@@ -181,6 +209,48 @@
 				}
 			}			
 		}
+		
+		&--rel {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
+				.o-bgfoto {
+					position: absolute;
+					height: 100%;
+					right: 0;
+					top: 0;
+					overflow: hidden;
+	
+					img {
+					    position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: auto;
+						max-width: none;
+					}
+				}
+			
+			.c-services__copy {
+				
+					position: relative;
+					top: auto;
+					transform: none;
+					
+					float: left;
+					padding-top: 70px;
+					padding-bottom: 140px;
+					
+					blockquote {
+						p {
+							font-size: get-vw-desk(30) !important;						
+						}
+					}
+					
+					.section {
+						margin-bottom: 40px;
+					}
+				}
+			}
+		}
 	}
 	
 	&__news {
@@ -220,5 +290,6 @@
 			display: block;
 		}
 	}
+	
 }
 

@@ -11,6 +11,12 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function get-vw-desk($target) {
+	$vw-context: (1400 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+
 @function get-vw-mob-land($target) {
 	$vw-context: (1024 * 0.01);
 	@return ($target / $vw-context) * 1vw;

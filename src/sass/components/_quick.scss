@@ -22,7 +22,7 @@
 			padding: 0 grid(90, $base3);
 		}
 	}
-	
+
 	&__item {
 		padding: 60px 0;
 		border-top: 2px solid $c-orange;
@@ -55,7 +55,14 @@
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				margin-bottom: get-vw(35);
+			}
+			
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(26);
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				font-size: get-vw-desk(26);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {
@@ -70,7 +77,14 @@
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				margin-bottom: get-vw(70);
+			}
+			
+			@media screen and ( min-width: $desktop + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(18);
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				font-size: get-vw-desk(18);
 			}
 			
 			@media screen and ( max-width: $tablet_portrait + px ) {
