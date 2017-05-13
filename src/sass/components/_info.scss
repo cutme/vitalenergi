@@ -70,7 +70,7 @@
 
 		h5 {
 		
-			@media screen and ( max-width: $desktop + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
 				margin-bottom: 10px;
 				font-size: get-vw-desk(16) !important;
 			}
@@ -102,10 +102,6 @@
 		
 		@media screen and ( max-width: $tablet_portrait + px ) { 
 			margin-bottom: get-vw-mob(45);
-		}
-		
-		&--pay {
-			
 		}
 	}
 	
@@ -142,7 +138,7 @@
 				weight: $demi;
 			}
 			
-			@media screen and ( max-width: $desktop + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
 				font-size: get-vw(30) !important;
 			}
 			
@@ -163,7 +159,7 @@
 			}
 			text-transform: uppercase;
 			
-			@media screen and ( max-width: $desktop + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
 				font-size: get-vw(20) !important;
 			}
 			
