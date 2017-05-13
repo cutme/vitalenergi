@@ -59,13 +59,22 @@
 	}
 	
 	&__pay {
-		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		@media screen and ( min-width: $desktop2 + 1 + px ) {
 			display: flex;
 		    align-items: center;
+		    align-items: flex-start;
 		    padding-top: 5px;
 		}
+		
+		
 
 		h5 {
+		
+			@media screen and ( max-width: $desktop + px ) {
+				margin-bottom: 10px;
+				font-size: get-vw-desk(16) !important;
+			}
+			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 				padding-right: 40px;
 			}
@@ -94,6 +103,10 @@
 		@media screen and ( max-width: $tablet_portrait + px ) { 
 			margin-bottom: get-vw-mob(45);
 		}
+		
+		&--pay {
+			
+		}
 	}
 	
 	&__select {
@@ -101,7 +114,7 @@
 	}
 	
 	&__twolines {
-		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
+		@media screen and ( min-width: $desktop + 1 + px ) {
 			display: flex;
 			justify-content: space-between;
 		}
@@ -111,9 +124,13 @@
 		}
 		
 		> div {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
+				margin-bottom: 10px;
+			}
+			
 			@media screen and ( max-width: $tablet_portrait + px ) {
 				margin-bottom: get-vw-mob(30);
-			}
+			}			
 		}
 
 		p {
@@ -123,6 +140,10 @@
 				family: $rift;
 				size: em(21);
 				weight: $demi;
+			}
+			
+			@media screen and ( max-width: $desktop + px ) {
+				font-size: get-vw(30) !important;
 			}
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
@@ -141,6 +162,10 @@
 				weight: $bold;
 			}
 			text-transform: uppercase;
+			
+			@media screen and ( max-width: $desktop + px ) {
+				font-size: get-vw(20) !important;
+			}
 			
 			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
 				font-size: get-vw(10);

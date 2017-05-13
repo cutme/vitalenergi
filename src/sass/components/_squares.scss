@@ -67,7 +67,7 @@
 		@extend %rel;
 		display: block;
 		line-height: normal;
-		overflow: hidden;
+		//overflow: hidden;
 		
 		@media screen and ( min-width: $tablet_portrait + 1 + px ) {
 			width: grid(300, 900);
@@ -100,6 +100,7 @@
 				}
 			}
 		}
+
 		
 		&:hover {
 			&:not(.no-photo) {
@@ -108,7 +109,7 @@
 						opacity: 1 !important;
 						filter: grayscale(0);
 					}
-					
+
 					&:after {
 						opacity: 0;
 					}
