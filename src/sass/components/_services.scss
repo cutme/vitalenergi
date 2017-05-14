@@ -137,6 +137,7 @@
 	}
 
 	&__item {
+		@extend %anim;
 		@extend %clear;
 		@extend %rel;
 		background-size: cover;
@@ -195,6 +196,10 @@
 					display: none;
 				}
 			}
+		}
+		
+		&--first {
+			opacity: 0;
 		}
 		
 		&--mobile {
@@ -287,6 +292,8 @@
 			display: block;
 		}
 	}
+	
+	
 	
 }
 
