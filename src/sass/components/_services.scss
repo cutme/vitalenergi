@@ -214,7 +214,7 @@
 		}
 		
 		&--rel {
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $tablet_portrait  + px ) {
+			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $desktop + px ) {
 				.o-bgfoto {
 					position: absolute;
 					height: 100%;
@@ -259,6 +259,8 @@
 					img {
 						height: auto;
 						width: 100%;
+						top: 50%;
+						transform: translateY(-50%)
 					}
 				}
 			}
