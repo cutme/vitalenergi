@@ -105,7 +105,8 @@
 		
 		.section {
 			@extend %font-rift;
-			
+			top: -140px;
+
 			font: {
 				size: em(24);
 				weight: $bold;
