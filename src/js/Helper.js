@@ -22,6 +22,8 @@
 			    setTimeout(function(){					
 					var parent = element.parentNode.parentNode;
 					parent.className = parent.className.replace(/\bis-hidden\b/,'');
+					parent.className = parent.className.replace(/\bis-hidden\b/,'');
+					parent.parentNode.parentNode.parentNode.parentNode.className = parent.parentNode.parentNode.parentNode.parentNode.className.replace(/\bis-hidden\b/,'');
 			    }, 200);
 	        }
 	   });
