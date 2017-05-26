@@ -5,8 +5,10 @@
         return {
         	exist: exist,
         	blazy: blazy,
+        	isInView: isInView,
         	mobileMenu: mobileMenu,
-        	nSelect: nSelect
+        	nSelect: nSelect,
+        	showOnScroll: showOnScroll
         };
     };
 
@@ -29,6 +31,16 @@
 	   });
 	}
 	
+	function isInView() {
+		var bottomOfWindow = $(window).scrollTop() + $(window).height();
+		
+		$('.anim').each(function() {
+			if ( $(this).offset().top < bottomOfWindow ) {
+				$(this).addClass('anim--done');
+			}
+		});
+	}
+
 	function mobileMenu() {
 		$("#menu").mmenu({
            "extensions": [
@@ -43,6 +55,29 @@
 	function nSelect() {
 		$('.nice-select').niceSelect();
 	}
+	
+	function showOnScroll() {
+    	var body = $(window);
+
+/*
+		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
+
+    	body.on('resize', function() {
+    		body = ( $(window).width() > 1024 ) ? $('#container') : $(window);
+    	});
+*/
+		
+		body.on('scroll', function() {		
+	        $('.anim').each( function(){
+				var bottomOfObject = $(this).offset().top,
+		          	bottomOfWindow = $(window).scrollTop() + $(window).height();
+	
+				if( bottomOfWindow > bottomOfObject ) {
+					$(this).addClass('anim--done');
+				}
+			});
+		});
+    }
 	
 	ve.helper = new Helper();
 

@@ -1,5 +1,6 @@
 .o-bgfoto {
 	display: block;
+	will-change: opacity;
 
 	@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 40 + px ) {
 		width: grid(745);

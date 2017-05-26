@@ -40,17 +40,11 @@
 		}
 		
 		article {
-			//margin-bottom: 120px;
-			
-			@media screen and ( min-width: $tablet_portrait + 1 + px ) and ( max-width: $base + 2*$padding + px ) {
-				//margin-bottom: get-vw(120);
-			}
-			
+
 			@media screen and ( max-width: $tablet_portrait + px ) {
 				margin-bottom: get-vw-mob(80);
 			}
 
-			
 			p {
 				margin-bottom: 1.7em;
 				line-height: 1.7;
@@ -141,7 +135,10 @@
 		@extend %anim;
 		@extend %clear;
 		@extend %rel;
-		background-size: cover;
+		background: {
+			size: cover;
+			attachment: fixed;
+		}
 
 		&:nth-child(even) {
 			background-image: url(../img/bg/v--dark.png);

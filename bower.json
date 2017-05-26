@@ -1,9 +1,9 @@
 {
-  "name": "vital energi",
+  "name": "vital-energi",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
-    "cutme"
+    "withpassion"
   ],
   "license": "ISC",
   "homepage": "",
@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "^1.11.3",
     "bLazy": "blazy#^1.8.2",
     "jquery-nice-select": "^1.1.0",
     "parsleyjs": "^2.6.2",
