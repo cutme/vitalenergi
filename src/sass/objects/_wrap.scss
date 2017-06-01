@@ -14,4 +14,11 @@
 		max-width: $base3+px;
 		padding: 0;
 	}
+	
+	&--nopadding {
+		padding: {
+			left: 0;
+			right: 0;
+		}
+	}
 }

@@ -18,7 +18,6 @@ var gulp         = require('gulp'),
     gulpFilter   = require('gulp-filter'),
     gcmq         = require('gulp-group-css-media-queries'),
     bowerFiles   = require('gulp-main-bower-files'),
-    w3cjs = require('gulp-w3cjs'),
     merge        = require('merge-stream'),
     spritesmith  = require('gulp.spritesmith'),
     responsive = require('gulp-responsive');
@@ -134,8 +133,6 @@ gulp.task('fileinclude', function() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(w3cjs())
-        .pipe(w3cjs.reporter())
         .pipe(gulp.dest('web/'))
         .pipe(browserSync.stream());        
 });
@@ -153,12 +150,6 @@ gulp.task('sprite', function () {
     var cssStream = spriteData.css.pipe(gulp.dest('src/sass/tools/'));
 
     return merge(imgStream, cssStream);
-});
-
-gulp.task('w3cjs', function () {
-    gulp.src('src/*.html')
-        .pipe(w3cjs())
-        .pipe(w3cjs.reporter());
 });
 
 gulp.task('default', ['sass', 'jshint', 'fileinclude']);
